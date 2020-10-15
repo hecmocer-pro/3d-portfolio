@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: lighter;
+}
+
+canvas {
+    outline: none;
+}
+
+.deviceWidthOverlay:not([hidden]) {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 10;
+}
+
+.deviceWidthOverlay button {
+    height: fit-content;
+    border: solid 1px white;
+    border-radius: 5px;
+    margin: 24px;
+    padding: 16px;
+    font-size: 24px;
+    background: rgba(255,255,255,0.3);
+    color: white;
+    cursor: pointer;
+}
+
+.deviceWidthOverlay button:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.deviceWidthOverlay p {
+    color: white;
+    font-size: 20px;
+}
+
+
+.tooltip {
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255, 0.8);
+    padding: 16px;
+    border-radius: 5px;
+    margin: 24px;
+    bottom: 0;
+    border: solid 1px white;
+    color: black;
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    z-index: 5;
+
+    transition: transform 1s;
+}
+
+.tooltip[hidden] {
+    transform: translateY(200%);
+}
+
+.tooltip:not([hidden]) {
+    transform: translateY(0);
+}
+
+.tooltip:not([hidden]) + .tooltip:not([hidden]) {
+    transform: translateY(-80px);
+}
+
+
+
+.loadingOverlay {
+    position: absolute;
+    height: 10000px;
+    width: 10000px;
+    background-color: black;
+    display: flex;
+    pointer-events: none;
+
+    transition: background-color 300ms;
+}
+
+.loadingOverlay[hidden] {
+    background-color: transparent;
+}
+
+.loadingOverlay:not([hidden]) {
+    background-color: black;
+}
+
+
+
+
+.sceneContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+button, h1, h2, h3, p, a {
+    pointer-events: all;
+}
+
+#scene1, #scene2, #scene3 {
+    display: block;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: visible;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#scene1 > *, #scene2 > *, #scene3 > * {
+    transform: translateY(0px);
+    transition: transform 1s linear;
+}
+
+.currentScene3 #scene1[hidden] *,
+.currentScene1 #scene3[hidden] * {
+    display: none;
+}
+
+.sceneContainer:not(.notTransitionedYet).currentScene2 #scene1[hidden] > *, .currentScene3 #scene2[hidden] > *,   #scene3[hidden] > * {
+    transform: translateY(-800px);
+}
+
+.sceneContainer:not(.notTransitionedYet) #scene1[hidden] > *, .currentScene1 #scene2[hidden] > *, .currentScene2 #scene3[hidden] > * {
+    transform: translateY(800px);
+}
+
+#scene1 > .title, #scene2 > .title, #scene3 > .title {
+    font-size: 64px;
+    font-family: 'Lato', sans-serif;
+}
+
+#scene1 > p, #scene2 > p, #scene3 > p {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+#scene1 {
+    margin-right: 50vw;
+}
+
+#scene2 {
+    margin-left: 35vw;
+    margin-top: 10vh;
+}
+
+#scene3 {
+    margin-left: 60vw;
+    margin-top: -30vh;
+}
+
+.notTransitionedYet #scene2 {
+    display: none;
+}
+
+.body {
+    margin: 4px;
+}
+
+.invisible > * {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.invisible > *:hover {
+    opacity: 1;
+}
+
+b {
+    font-family: 'Chilanka', cursive;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: solid 1px black;
+    font-family: 'Chilanka', cursive;
+    height: 20px;
+}
+
+a:hover {
+    border-bottom: solid 2px black;
+}
