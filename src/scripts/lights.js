@@ -1,6 +1,9 @@
 export default function({ scene, config }) {
 
-    scene.add(new THREE.AmbientLight(0xffffff, .6))
+    var light = new THREE.PointLight( 0xffffff, 1, 3000 );
+    light.position.set( 75, 50, 50 );
+    scene.add( light );
+
     scene.add(new THREE.HemisphereLight(0xffffbb, 0x080820, 0.4))
 
     const spotlights = []
@@ -18,8 +21,8 @@ export default function({ scene, config }) {
         spotlight.shadow.camera.near = lightConfig.shadowNear;
         spotlight.shadow.camera.far = lightConfig.shadowFar;
         spotlight.shadow.camera.fov = lightConfig.shadowFov;
-        spotlight.shadow.mapSize.width = lightConfig.shadowWidth;
-        spotlight.shadow.mapSize.height = lightConfig.shadowHeight;
+        spotlight.shadow.mapSize.width = lightConfig.shadowWidth * 4;
+        spotlight.shadow.mapSize.height = lightConfig.shadowHeight * 4;
 
         //Adjust spotlight parameters
         spotlight.angle = lightConfig.angle;
