@@ -44,11 +44,11 @@ My original objective was
 
 I still cannot believe that I pulled this off. Probably the longest side-project I've managed to stabilise and publish. Thanks for reading
 
-[Sketch 0][https://github.com/hecmocer-pro/3d-portfolio/blob/main/docs/Sketch0.png]
+![Sketch 0][/docs/Sketch0.png?raw=true]
 
-[Sketch 1][https://github.com/hecmocer-pro/3d-portfolio/blob/main/docs/Sketch1.jpg]
+![Sketch 1][/docs/Sketch1.jpg?raw=true]
 
-[Sketch 2][https://github.com/hecmocer-pro/3d-portfolio/blob/main/docs/Sketch2.jpg]
+![Sketch 2][/docs/Sketch2.jpg?raw=true]
 
 I really hope you like this and hopefully get inspired
 ---
