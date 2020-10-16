@@ -50,6 +50,11 @@ My original objective was
 
 I still cannot believe that I pulled this off. Probably the longest side-project I've managed to stabilise and publish. Thanks for reading
 
+---
+
+Sketches
+===
+
 ![Sketch 0](/docs/Sketch0.png?raw=true "Initial Sketch in... well... sketch")
 
 ![Sketch 1](/docs/Sketch1.jpg?raw=true "One of the earlier sketches")
