@@ -2,62 +2,83 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport"
-    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Hecmocer | 3D portfolio</title>
-  <link rel="stylesheet" href="src/styles/main.css">
-  <script src="/lib/three.min.js"></script>
-  <script type="module" src="lib/three-gltf-loader.js"></script>
-  <script src="/lib/enable3d.ammoPhysics.0.19.1.min.js"></script>
-  <script src="/lib/OrbitControls.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Commissioner&family=Lato:wght@700&display=swap" rel="stylesheet">
+    <title>Hecmocer | 3D portfolio</title>
+    <link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#EEEEEE" />
+    <meta name="application-name" content="Hecmocer">
+    <meta name="description"
+        content="Feel free to jump in and discover Hecmocer. This site has been custom made with love, to hold contact information and more">
+    <meta name="keywords"
+        content="Hecmocer, Hector, Moreno, Hector Moreno, Portfolio, Developer, Web, Application, Frontend, Hire">
+    <meta name="author" content="Hecmocer">
+    <meta name="google-site-verification" content="MXokGjXPh67diSRdT3KrfWTzJhz1sHTaQG9FY-n8pV8" />
+
+    <link rel="stylesheet" href="src/styles/main.css">
+    <script src="/lib/three.min.js"></script>
+    <script type="module" src="lib/three-gltf-loader.js"></script>
+    <script src="/lib/enable3d.ammoPhysics.0.19.1.min.js"></script>
+    <script src="/lib/OrbitControls.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Chilanka&family=Commissioner&family=Lato:wght@700&display=swap"
+        rel="stylesheet">
 
 </head>
 
 <body>
-  <div class="loadingOverlay"></div>
-  <div class="tooltip waitForAnimation" hidden>Wait for the ball to fall to continue</div>
-  <div class="tooltip scrollForMore" hidden>Scroll for more content</div>
-  <div class="tooltip arrowKeysForNavigating" hidden>Use the arrow keys to navigate up and down</div>
-  <div class="deviceWidthOverlay" hidden>
-    <p>
-      This project is not suited for this resolution
-    </p>
-    <p>
-      Please consider using a computer on a 16:9 resolution with at least 1500px wide
-    </p>
-    <button id="closeOverlayButton">I understand</button>
-  </div>
+    <div class="loadingOverlay"></div>
+    <div class="tooltip waitForAnimation" hidden>Wait for the ball to fall to continue</div>
+    <div class="tooltip scrollForMore" hidden>Scroll for more content</div>
+    <div class="tooltip arrowKeysForNavigating" hidden>Use the arrow keys to navigate up and down</div>
+    <div class="deviceWidthOverlay" hidden>
+        <p>
+            This project is not suited for this resolution
+        </p>
+        <p>
+            Please consider using a computer on a 16:9 resolution with at least 1500px wide
+        </p>
+        <button id="closeOverlayButton">I understand</button>
+    </div>
 
-  <div class="sceneContainer notTransitionedYet">
-    <div id="scene1" hidden>
-      <h1 class="title">Hecmocer</h1>
-      <p class="body">I build web apps for a living</p>
-      <p class="body">As Frontend Lead in JLL as of 2020</p>
-      <p class="body">Hecmocer comes from my name — <b>Hec</b>tor <b>Mo</b>reno <b>Cer</b>vera</p>
+    <div class="sceneContainer notTransitionedYet">
+        <div id="scene1" hidden>
+            <h1 class="title">Hecmocer</h1>
+            <p class="body">I build web apps for a living</p>
+            <p class="body">As Frontend Lead in JLL as of 2020</p>
+            <p class="body">Hecmocer comes from my name — <b>Hec</b>tor <b>Mo</b>reno <b>Cer</b>vera</p>
+        </div>
+        <div id="scene2" hidden>
+            <h2 class="title">WorkFun</h2>
+            <p class="body">Sometimes I also like to build little somethings out of the ordinary</p>
+            <p class="body">Like this 3D experiment built using <a href="https://threejs.org/"
+                    target="_blank">ThreeJS</a>, <a href="https://enable3d.io/" target="_blank">Enable3d</a>, <a
+                    href="https://github.com/kripken/ammo.js/" target="_blank">ammoJS</a> </p>
+            <p class="body">Greatly inspired by <a
+                    href="https://dribbble.com/shots/14072513-physics-3D-landing-page-concept" target="_blank">this
+                    concept</a> seen in <a
+                    href="https://tympanus.net/codrops/2020/09/22/ui-interactions-animations-roundup-10/"
+                    target="_blank">Codrops</a></p>
+        </div>
+        <div id="scene3" hidden>
+            <h3 class="title">Say hi!</h3>
+            <p class="body"><a href="https://twitter.com/hecmocerpro" target="_blank">Twitter</a> — Things I find and do
+                on the internet</p>
+            <p class="body"><a href="https://www.instagram.com/hecmocerpro/" target="_blank">Instagram</a> — My
+                tech-related day to day</p>
+            <p class="body"><a href="https://hecmocer.es/" target="_blank">Portfolio</a> — What I've achieved so far</p>
+            <p class="body invisible"><span><a id="invisibleNewtonMode" href="#NewtonMode">Newton Mode</a> — Enables
+                    physics debug</span></p>
+            <p class="body invisible"><span><a id="invisibleStalkerMode" href="#StalkerMode">Stalker Mode</a> — Enables
+                    free camera movement</span></p>
+            <p class="body invisible"><span><a id="invisibleHeliosMode" href="#HeliosMode">Helios Mode</a> — Enables
+                    light viewer</span></p>
+            <p class="body invisible"><span><a id="invisibleImpatientMode" href="#ImpatientMode">Impatient Mode</a> —
+                    Removes waiting between transitions</span></p>
+        </div>
     </div>
-    <div id="scene2" hidden>
-      <h2 class="title">WorkFun</h2>
-      <p class="body">Sometimes I also like to build little somethings out of the ordinary</p>
-      <p class="body">Like this 3D experiment built using <a href="https://threejs.org/" target="_blank">ThreeJS</a>, <a href="https://enable3d.io/" target="_blank">Enable3d</a>, <a href="https://github.com/kripken/ammo.js/" target="_blank">ammoJS</a> </p>
-      <p class="body">Greatly inspired by <a href="https://dribbble.com/shots/14072513-physics-3D-landing-page-concept" target="_blank">this concept</a> seen in <a href="https://tympanus.net/codrops/2020/09/22/ui-interactions-animations-roundup-10/" target="_blank">Codrops</a></p>
-    </div>
-    <div id="scene3" hidden>
-      <h3 class="title">Say hi!</h3>
-      <p class="body"><a href="https://twitter.com/hecmocerpro" target="_blank">Twitter</a> — Things I find and do on the internet</p>
-      <p class="body"><a href="https://www.instagram.com/hecmocerpro/" target="_blank">Instagram</a> — My tech-related day to day</p>
-      <p class="body"><a href="https://hecmocer.es/" target="_blank">Portfolio</a> — What I've achieved so far</p>
-      <p class="body invisible"><span><a id="invisibleNewtonMode" href="#NewtonMode">Newton Mode</a> — Enables physics debug</span></p>
-      <p class="body invisible"><span><a id="invisibleStalkerMode" href="#StalkerMode">Stalker Mode</a> — Enables free camera movement</span></p>
-      <p class="body invisible"><span><a id="invisibleHeliosMode" href="#HeliosMode">Helios Mode</a> — Enables light viewer</span></p>
-      <p class="body invisible"><span><a id="invisibleImpatientMode" href="#ImpatientMode">Impatient Mode</a> — Removes waiting between transitions</span></p>
-    </div>
-  </div>
 
-  <script type="module" src="src/scripts/domEventController.js"></script>
-  <script type="module" src="src/scripts/main.js"></script>
+    <script type="module" src="src/scripts/domEventController.js"></script>
+    <script type="module" src="src/scripts/main.js"></script>
 </body>
 
 </html>
