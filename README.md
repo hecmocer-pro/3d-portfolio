@@ -1,3 +1,7 @@
+# 3d-portfolio
+
+An interactive 3D portfolio built with Three.js and Enable3D.
+
 ![Screenshot](/docs/Screenshot.png?raw=true "An screenshot for you if you are lazy enough not to go and watch the video but still leave your mouse over the picture for a while")
 
 Available at [hecmocer.es/3d-portfolio](https://hecmocer.es/3d-portfolio/)
