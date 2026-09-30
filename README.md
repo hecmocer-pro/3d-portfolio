@@ -1,6 +1,6 @@
 # 3d-portfolio
 
-[2020] An interactive 3D portfolio built with Three.js and Enable3D.
+[2020-2020] An interactive 3D portfolio built with Three.js and Enable3D.
 
 ![Screenshot](/docs/Screenshot.png?raw=true "An screenshot for you if you are lazy enough not to go and watch the video but still leave your mouse over the picture for a while")
 
